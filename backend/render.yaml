@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: balbant-portfolio-api
+    env: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        value: $MONGODB_URI
+      - key: EMAIL_USER
+        value: $EMAIL_USER
+      - key: EMAIL_PASSWORD
+        value: $EMAIL_PASSWORD
+      - key: FRONTEND_URL
+        value: $FRONTEND_URL
